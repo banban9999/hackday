@@ -1,4 +1,0 @@
-#Sat Dec 14 23:35:12 JST 2019
-base.0=/Users/beppu/unity/VRProject/Temp/gradleOut/build/intermediates/transforms/dexMerger/release/0
-path.0=classes.dex
-renamed.0=classes.dex
