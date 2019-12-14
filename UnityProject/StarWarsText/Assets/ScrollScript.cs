@@ -12,7 +12,8 @@ using System.Collections;
 public class ScrollScript : MonoBehaviour {
 
     private bool isScrolling; // We'll use this for debugging
-    private float rotation;   // Default 55deg, but read in from canvas 
+    private float rotation;   // Default 55deg, but read in from canvas
+    public float speed;
 
     // Start the scrolling effect on load
     void Start () {
@@ -51,12 +52,12 @@ public class ScrollScript : MonoBehaviour {
          // Increment the Y value of the panel 
          Vector3 _incrementYPosition = 
           new Vector3(_currentUIPosition.x ,
-                      _currentUIPosition.y + .01f * Mathf.Sin(Mathf.Deg2Rad * rotation),
-                      _currentUIPosition.z + .01f * Mathf.Cos(Mathf.Deg2Rad * rotation));
+                      _currentUIPosition.y + speed * Mathf.Sin(Mathf.Deg2Rad * rotation),
+                      _currentUIPosition.z + speed * Mathf.Cos(Mathf.Deg2Rad * rotation));
 
          // Change the transform position to the new one
          Debug.Log("New Position: " + _incrementYPosition);
-         gameObject.transform.position = _incrementYPosition;      
+         gameObject.transform.position = _incrementYPosition;
        }
     }
  }
